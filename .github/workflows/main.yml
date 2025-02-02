@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Display Email (using echo)
-        run: echo "Your email is: xxfxxxxxx@ds.study.iitm.ac.in"
+        run: echo "Your email is:"22f2000831@ds.study.iitm.ac.in"
 
       - name: Display Email (using cat << EOF)  # Alternative
         run: |
