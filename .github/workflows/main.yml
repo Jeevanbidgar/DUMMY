@@ -12,5 +12,16 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Display Email
-        run: echo "22f2000813@ds.study.iitm.ac.in" # Added 'run:'
+      - name: Display Email (using echo)
+        run: echo "Your email is: xxfxxxxxx@ds.study.iitm.ac.in"
+
+      - name: Display Email (using cat << EOF)  # Alternative
+        run: |
+          cat << EOF
+          Your email is: xxfxxxxxx@ds.study.iitm.ac.in
+          EOF
+
+      - name: Display Email (using environment variable) # Best practice
+        env:
+          EMAIL: "xxfxxxxxx@ds.study.iitm.ac.in"
+        run: echo "Your email is: $EMAIL"
